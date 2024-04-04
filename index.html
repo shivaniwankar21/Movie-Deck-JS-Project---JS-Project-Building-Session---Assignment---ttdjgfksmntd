@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Deck</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1><a href="#">Movie Deck</a></h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search by name..." autocomplete="off" id="searchInput">
+            <button onclick="searchMovies()">Search</button>
+        </div>
+        <div class="sorting-options">
+            <button onclick="sortMoviesByDate()">Sort by date (oldest to latest)</button>
+            <button onclick="sortMoviesByRating()">Sort by rating (least to most)</button>
+        </div>
+        <div class="tabs">
+            <button class="active-tab" onclick="showAllMovies()">All</button>
+            <button onclick="showFavoriteMovies()">Favorites</button>
+        </div>
+    </header>
+    <main>
+        <div class="movie-list" id="movieList"></div>
+        <div class="pagination">
+            <button onclick="previousPage()" disabled>Previous</button>
+            <span id="currentPage">Current Page: 1</span>
+            <button onclick="nextPage()">Next</button>
+        </div>
+    </main>
+    <footer>
+        <p>© 2023 Movie Deck</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
