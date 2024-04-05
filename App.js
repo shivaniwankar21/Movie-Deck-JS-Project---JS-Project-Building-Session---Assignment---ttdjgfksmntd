@@ -112,6 +112,7 @@ function nextPage() {
 
 async function fetchAndRenderMovies() {
     const movieData = await fetchMovies(currentPage);
+     movies = [...movieData]
     renderMovies(movieData);
     updatePaginationButtons();
 }
